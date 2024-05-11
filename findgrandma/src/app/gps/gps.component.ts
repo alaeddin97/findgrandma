@@ -2,20 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-sms',
-  templateUrl: './sms.component.html',
-  styleUrls: ['./sms.component.css']
+  selector: 'app-gps',
+  templateUrl: './gps.component.html',
+  styleUrls: ['./gps.component.css']
 })
-export class SMSComponent implements OnInit {
- isChecked: boolean = true;
+export class GPSComponent implements OnInit {
 
   constructor(private router:Router) { }
 
   ngOnInit(): void {
-  }
-
-  toggle() {
-
   }
 
   navigateToMenu() {

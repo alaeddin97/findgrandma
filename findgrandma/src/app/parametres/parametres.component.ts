@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-parametres',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParametresComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigateToSMS() {
+    this.router.navigate(['sms']);
+  }
+
+  navigateToHoraires() {
+    this.router.navigate(['horairesMedoc']);
+  }
+
+  navigateToGPS() {
+    this.router.navigate(['gps']);
+  }
+
+  navigateToLogin() {
+    this.router.navigate(['login']);
   }
 
 }

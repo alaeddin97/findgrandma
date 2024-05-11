@@ -1,11 +1,11 @@
 <html>
-    <h1>Paramètres</h1>
-    <div class="account"><img src="/assets/utilisateur.png"> Yassine</div>
+    <h1>Menu</h1>
+    <div class="account" (click)="navigateToLogin()" style="cursor: pointer;"><img src="/assets/utilisateur.png"> Yassine</div>
     
             <ul class="settings-list">
-              <li class="settings-item"><img src="/assets/carte.png"> GPS</li>
-              <li class="settings-item"><img src="/assets/bavarder.png"> SMS</li>
-              <li class="settings-item"><img src="/assets/medicament.png"> Horaires Médicament</li>
+              <li class="settings-item" (click)="navigateToGPS()" style="cursor: pointer;"><img src="/assets/carte.png"> GPS</li>
+              <li class="settings-item" (click)="navigateToSMS()" style="cursor: pointer;"><img src="/assets/bavarder.png"> SMS</li>
+              <li class="settings-item" (click)="navigateToHoraires()" style="cursor: pointer;"><img src="/assets/medicament.png"> Horaires de médoc</li>
             </ul>
 </html>
 

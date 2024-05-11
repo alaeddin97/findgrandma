@@ -1,0 +1,29 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: -100px;
+  }
+  
+  .login-card {
+    width: 300px;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  mat-form-field {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  h1{
+    color: rgb(151, 37, 37);
+    font-weight: bold;
+    margin: 10px;
+    background-color: transparent;
+}
+  
