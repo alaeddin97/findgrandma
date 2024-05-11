@@ -1,0 +1,15 @@
+h1{
+    color: rgb(151, 37, 37);
+    font-weight: bold;
+    margin: 10px;
+    background-color: transparent;
+}
+
+.account{
+    background-color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding:20px;
+    font-size: 25px;
+    border-radius: 10px;
+}
