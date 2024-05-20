@@ -7,6 +7,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  username:string = '';
+  password:string = '';
+  isLoggedIn = true;
 
   constructor(private router:Router) { }
 
@@ -15,6 +18,15 @@ export class LoginComponent implements OnInit {
 
   navigateToMenu() {
     this.router.navigate(['menu']);
+  }
+
+  login() {    
+    if (this.username === 'Yassine' && this.password === 'ALA12345ala@') {
+      this.isLoggedIn = false;
+      this.navigateToMenu();
+    } else {
+      
+    }
   }
 
 }

@@ -1,0 +1,7 @@
+{
+    "username" : "Yassine",
+    "password" : "12345",
+    "signin" : "Se connecter",
+    "signout" : "Se deconnecter",
+    "isLoggedIn": false
+}

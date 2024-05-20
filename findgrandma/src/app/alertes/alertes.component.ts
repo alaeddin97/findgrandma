@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router'
+import { ArduinoService } from '../shared/arduino.service';
 
 @Component({
   selector: 'app-alertes',
@@ -8,13 +9,20 @@ import {Router} from '@angular/router'
 })
 export class AlertesComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  isAddCreneau:boolean = false;
+  doses: Date[] = [];
+
+  constructor(private router:Router, private arduinoService: ArduinoService) { }
 
   ngOnInit(): void {
   }
 
   navigateToMenu() {
     this.router.navigate(['menu']);
+  }
+
+  saveAlertes() {
+    this.arduinoService.saveAlertes(this.doses);
   }
 
 }

@@ -1,17 +1,20 @@
 <html>
     <h1><img src="/assets/fleche-gauche.png" style="width: 40px;height: 40px;" (click)="navigateToMenu()">Horaires de médoc</h1>
     <div class="generic">  
-        <div class="setting"><div>1ère dose</div><input type="time" placeholder="08:00"></div>
+        <div class="setting"><div>1ère dose</div><input type="time" placeholder="08:00" [(ngModel)]="doses[0]"></div>
     </div>
     <div class="generic">  
-        <div class="setting"><div>2ème dose</div><input type="time" placeholder="12:00"></div>
+        <div class="setting"><div>2ème dose</div><input type="time" placeholder="12:00" [(ngModel)]="doses[1]"></div>
     </div>
     <div class="generic">  
-        <div class="setting"><div>3ème dose</div><input type="time" placeholder="20:00"></div>
+        <div class="setting"><div>3ème dose</div><input type="time" placeholder="14:00" [(ngModel)]="doses[2]"></div>
+    </div>
+    <div class="generic" *ngIf="isAddCreneau">  
+        <div class="setting"><div>4ème dose</div><input type="time" placeholder="18:00" [(ngModel)]="doses[3]"></div>
     </div>
     
     <div class="generic"> 
-        <div class="setting"><button class="btn btn-info">Ajouter créneau</button></div>
+        <div class="setting"><button class="btn btn-info" (click)="isAddCreneau=true">Ajouter créneau</button></div>
     </div>
     <div class="generic"> 
         <div class="setting"><button class="btn btn-primary">Enregistrer</button></div>

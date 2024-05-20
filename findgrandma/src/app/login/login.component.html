@@ -1,16 +1,16 @@
 <html>
-    <h1><img src="/assets/fleche-gauche.png" style="width: 40px;height: 40px;" (click)="navigateToMenu()">Login</h1>
+    <h1><img src="/assets/fleche-gauche.png" style="width: 40px;height: 40px;" (click)="navigateToMenu()">Connexion</h1>
     <div class="login-container">
         <mat-card class="login-card">
           <mat-card-content>
             <form class="login-form">
               <mat-form-field appearance="outline">
-                <input matInput placeholder="Nom d'utilisateur" type="text">
+                <input matInput type="text" placeholder="username" name="username" [(ngModel)]="username">
               </mat-form-field>
               <mat-form-field appearance="outline">
-                <input matInput placeholder="Mot de passe" type="password">
+                <input matInput type="password" placeholder="password" name="password" [(ngModel)]="password">
               </mat-form-field>
-              <button mat-raised-button color="primary" type="submit">Se connecter</button>
+              <button mat-raised-button color="primary" type="button" (click)="login()">{{isLoggedIn ? 'Se connecter' : 'Se deconnecter'}}</button>
             </form>
           </mat-card-content>
         </mat-card>
