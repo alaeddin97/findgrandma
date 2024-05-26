@@ -15,6 +15,13 @@ export class SMSComponent implements OnInit {
   constructor(private router:Router, private arduinoService: ArduinoService) { }
 
   ngOnInit(): void {
+    this.arduinoService.getSms().subscribe(smsData => {
+      this.isChecked = smsData.dosendSms;
+      this.sim = smsData.phoneNumber;
+      this.freq = smsData.frequency;
+      console.log(smsData);
+      
+    })
   }
 
   toggle() {

@@ -1,15 +1,15 @@
 <html>
     <h1><img src="/assets/fleche-gauche.png" style="width: 40px;height: 40px;" (click)="navigateToMenu()">SMS</h1>
     <div class="generic">  
-        <div class="setting"><div>Texte moi</div><mat-slide-toggle (change)="toggle()" [checked]="isChecked"></mat-slide-toggle></div>
+        <div class="setting"><div>Texte moi</div><mat-slide-toggle (change)="toggle()" [checked]="isChecked" name="isChecked" [(ngModel)]="isChecked"></mat-slide-toggle></div>
     </div>
     <div class="generic">  
-        <div class="setting"><div>SIM</div><input type="number" placeholder="00 00 00 00 00"></div>
+        <div class="setting"><div>SIM</div><input type="text" placeholder="25 033 861" name="sim" [(ngModel)]="sim"></div>
     </div>
     <div class="generic">  
-        <div class="setting"><div>Fréquence</div><input type="number" placeholder="15 min"></div>
+        <div class="setting"><div>Fréquence</div><input type="number" placeholder="15 min" name="freq" [(ngModel)]="freq"></div>
     </div>
     <div class="generic"> 
-        <div class="setting"><button class="btn btn-primary">Enregistrer</button></div>
+        <div class="setting"><button class="btn btn-primary" (click)="saveSim()">Enregistrer</button></div>
     </div>
 </html>

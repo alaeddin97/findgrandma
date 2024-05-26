@@ -2,15 +2,15 @@
     <h1><img src="/assets/fleche-gauche.png" style="width: 40px;height: 40px;" (click)="navigateToMenu()">GPS</h1>
     
     <div class="generic">  
-        <div class="setting"><div>Latitude</div><input type="number" placeholder="42.44"></div>
+        <div class="setting"><div>Latitude</div><input type="number" name="lat" [(ngModel)]="lat"></div>
     </div>
     <div class="generic">  
-        <div class="setting"><div>Longitude</div><input type="number" placeholder="2.44"></div>
+        <div class="setting"><div>Longitude</div><input type="number" name="lon"  [(ngModel)] ="lon"></div>
     </div>
     <div class="generic">  
-        <div class="setting"><div>Distance limite</div><input type="number" placeholder="3 Km"></div>
+        <div class="setting"><div>Distance limite</div><input type="number" name="distance" [(ngModel)]="distance"></div>
     </div>
     <div class="generic"> 
-        <div class="setting"><button class="btn btn-primary">Enregistrer</button></div>
+        <div class="setting"><button class="btn btn-primary" (click)="saveGps()">Enregistrer</button></div>
     </div>
 </html>

@@ -15,6 +15,10 @@ export class AlertesComponent implements OnInit {
   constructor(private router:Router, private arduinoService: ArduinoService) { }
 
   ngOnInit(): void {
+    this.arduinoService.getAlertes().subscribe(alertes => {
+      alertes.forEach(alerte => this.doses.push(alerte));
+      this.isAddCreneau = this.doses.length > 3;
+    })
   }
 
   navigateToMenu() {
@@ -23,6 +27,10 @@ export class AlertesComponent implements OnInit {
 
   saveAlertes() {
     this.arduinoService.saveAlertes(this.doses);
+  }
+
+  delete() {
+    this.doses.splice(3,1);
   }
 
 }
